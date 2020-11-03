@@ -60,7 +60,6 @@
   transform: scale(0.5);
 }
 
-
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
     transition: 1s;
@@ -100,27 +99,25 @@
   }
 }
 
-
-
-/* CONTROLLARE MANNAGGINA */
 .ex-11-icon {
     font-size: 60px;
 }
 .ex-11-icon:hover{
   animation-name: spin_270;
   animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 @keyframes spin_270 {
   0%{
     transform: rotate(0deg);
   }
-  100%{
+  80%{
     transform: rotate(270deg);
   }
+  100%{
+    transform: rotate(0deg);
+  }
 }
-
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -154,12 +151,9 @@
     transition: right linear 0.2s;
 }
 
-
-
 .ex-12-button:hover .ex-12-top-white{
   left: 50%;
 }
-
 .ex-12-button:hover .ex-12-bottom-white{
   right: 60%;
 }
@@ -170,41 +164,37 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
+.ex-13-bottom-white{
+  animation-name: clockbottom;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 @keyframes clocktop {
-  0% {top: -10px; left: 10%; background: red;}
+  0% {top: -10px; left: 10%;}
 
-  10%  {top: -10px; left: 80%; background: blue; width: 60px; height: 20px}
+  30%  {top: -10px; left: calc(100% - 30px); }
 
-  20%  {top: -10px; left: 98%; background: blue; width:20px; height: 60px;}
+  45%  {top: calc(100% - 10px); left: calc(100% - 30px); }
 
-  30%  {top: 40px; left: 98%; background: yellow;width:20px; height: 60px;}
+  75% {top: calc(100% - 10px); left:-20px ; }
 
-  40%  {top: 55px; left: 80%; background: yellow;width:60px; height: 20px;}
+  90% {top: -10px; left:-20px ; }
 
-  50%  {top: 55px; left: -3%; background: yellow;width:60px; height: 20px;}
+  100% {top: -10px; left: 10%; }
+}
+@keyframes clockbottom {
+  0% {bottom: -10px;  right: 20%;}
 
-  60%  {top: 55px; left: -10%; background: green;width:20px; height: 60px;}
+  30%  {bottom: -10px; right: calc(100% - 40px);}
 
-  70%  {top: 0px; left: -10%; background: green;width:20px; height: 60px;}
+  45%  {bottom: calc(100% - 10px); right: calc(100% - 40px);}
 
-  80% {top: -10px; left: -13%; background: red;width:60px; height: 20px;}
+  75% {bottom: calc(100% - 10px); right:-30px;}
 
-  90% {top: -10px; left: -10%; background: red;width:60px; height: 20px;}
+  90% {bottom: -10px; right:-30px;}
 
-  100% 0%{ top: -10px; left: 10%; background: red; width:60px; height: 20px;}
+  100% {bottom: -10px; right: 20%;}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FINE */
+/* I VALORI DI ALCUNI LEFT E RIGHT SONO INFERIORI DI 10PX PER NON SBORDARE DAL BOTTONE */
