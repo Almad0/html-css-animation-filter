@@ -24,21 +24,45 @@
     background: red;
     transition: border-radius 2s
 }
-
 .ex-3-square:hover{
   border-radius: 50%;
 }
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    animation-name: hidden;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+@keyframes hidden {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: transform 2s;
+
 }
+.ex-5-square:hover{
+  transform: scale(2);
+}
+.ex-5-square:active{
+  transform: scale(0.5);
+}
+
+
+
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
@@ -47,12 +71,15 @@
     margin: 50px 100px;
     width: 400px;
 }
+
 .ex-10-icon {
     font-size: 60px;
 }
+
 .ex-11-icon {
     font-size: 60px;
 }
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
